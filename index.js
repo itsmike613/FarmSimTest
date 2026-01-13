@@ -484,19 +484,18 @@ function buildHotbarUI() {
 
     const data = hotbar[i];
     if (data.id) {
-      const img = document.createElement("img");
-      img.draggable = false;
-      img.src = ItemDefs[data.id].icon.image.currentSrc || (TEX_PATH + iconNameForItem(data.id));
-      // Fallback: if texture image not ready yet, set after load tick
-      s.appendChild(img);
+  const img = document.createElement("img");
+  img.draggable = false;
+  img.src = ItemDefs[data.id].iconSrc;
+  s.appendChild(img);
 
-      if (data.count > 1) {
-        const c = document.createElement("div");
-        c.className = "count";
-        c.textContent = String(data.count);
-        s.appendChild(c);
-      }
-    }
+  if (data.count > 1) {
+    const c = document.createElement("div");
+    c.className = "count";
+    c.textContent = String(data.count);
+    s.appendChild(c);
+  }
+}
 
     hotbarEl.appendChild(s);
   }
