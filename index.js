@@ -120,14 +120,15 @@ const ITEM = {
 };
 
 const ItemDefs = {
-  [ITEM.BUCKET_EMPTY]: { name: "Empty Bucket", icon: TEX.bucketEmpty, stack: 1 },
-  [ITEM.BUCKET_WATER]: { name: "Water Bucket", icon: TEX.bucketWater, stack: 1 },
-  [ITEM.HOE]: { name: "Wooden Hoe", icon: TEX.hoe, stack: 1 },
-  [ITEM.SHOVEL]: { name: "Wooden Shovel", icon: TEX.shovel, stack: 1 },
-  [ITEM.SEEDS]: { name: "Wheat Seeds", icon: TEX.seeds, stack: 64 },
-  [ITEM.DIRT_ITEM]: { name: "Dirt", icon: TEX.dirtItem, stack: 64 },
-  [ITEM.WHEAT]: { name: "Wheat", icon: TEX.wheat, stack: 64 },
+  [ITEM.BUCKET_EMPTY]: { name: "Empty Bucket", icon: TEX.bucketEmpty, iconSrc: TEX_PATH + "bucket_empty.png", stack: 1 },
+  [ITEM.BUCKET_WATER]: { name: "Water Bucket", icon: TEX.bucketWater, iconSrc: TEX_PATH + "bucket_water.png", stack: 1 },
+  [ITEM.HOE]: { name: "Wooden Hoe", icon: TEX.hoe, iconSrc: TEX_PATH + "hoe.png", stack: 1 },
+  [ITEM.SHOVEL]: { name: "Wooden Shovel", icon: TEX.shovel, iconSrc: TEX_PATH + "shovel.png", stack: 1 },
+  [ITEM.SEEDS]: { name: "Wheat Seeds", icon: TEX.seeds, iconSrc: TEX_PATH + "seeds.png", stack: 64 },
+  [ITEM.DIRT_ITEM]: { name: "Dirt", icon: TEX.dirtItem, iconSrc: TEX_PATH + "dirt_item.png", stack: 64 },
+  [ITEM.WHEAT]: { name: "Wheat", icon: TEX.wheat, iconSrc: TEX_PATH + "wheat.png", stack: 64 },
 };
+
 
 // ============================================================
 // CROP DEFINITIONS
