@@ -1,24 +1,30 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Tiny Island Farm (Three.js)</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farming Sandbox</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
-
 <body>
-    <div id="hud">
-        <div id="crosshair">+</div>
-        <div id="hotbar"></div>
-        <div id="hint">Click to play • WASD • Space jump • Ctrl sprint • LMB break/harvest • RMB use/place • 1-9 / wheel
-        </div>
+  <div id="hud">
+    <div id="crosshair">+</div>
+
+    <div id="hint">
+      Click to lock mouse • WASD move • Space jump • Ctrl sprint • LMB break/harvest • RMB use/place
     </div>
 
-    <canvas id="game"></canvas>
+    <div id="hotbar"></div>
+  </div>
 
-    <script type="module" src="src/main.js"></script>
+  <div id="blocker">
+    <div id="blockerInner">
+      <div class="title">Farming Sandbox</div>
+      <div class="subtitle">Click to play</div>
+      <div class="small">Esc to unlock mouse</div>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
 </body>
-
 </html>

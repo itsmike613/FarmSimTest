@@ -1,0 +1,123 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    user-select: none;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+}
+
+#hud {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+#crosshair {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+#hint {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
+
+#hotbar {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(9, 46px);
+    gap: 6px;
+    pointer-events: none;
+}
+
+.slot {
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.slot.selected {
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35) inset;
+}
+
+.slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+.count {
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    font-size: 12px;
+    color: white;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+#blocker {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+#blockerInner {
+    text-align: center;
+    padding: 18px 22px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: white;
+}
+
+#blockerInner .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+#blockerInner .subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#blockerInner .small {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.75;
+}
